@@ -1,0 +1,29 @@
+repositories {
+    mavenCentral()
+    maven {
+        name = 'destroystokyo-repo'
+        url = 'https://repo.destroystokyo.com/repository/maven-public/'
+    }
+    maven {
+        name = 'sonatype'
+        url = 'https://oss.sonatype.org/content/groups/public/'
+    }
+}
+
+dependencies {
+    compile 'com.destroystokyo.paper:paper-api:1.12.2-R0.1-SNAPSHOT'
+    compile(project(':MinigameCore'))
+}
+
+processResources{
+    from(sourceSets.main.resources.srcDirs){
+        expand 'version': project.version
+    }
+}
+
+shadowJar {
+    dependencies{
+        include(dependency(':MinigameCore'))
+    }
+    destinationDir = file("$rootDir/build/jars")
+}

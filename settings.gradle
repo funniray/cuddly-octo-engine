@@ -1,0 +1,3 @@
+rootProject.name = 'Minigame'
+include 'MinigameCore', 'SampleMinigame'
+

@@ -1,0 +1,6 @@
+name: SampleMinigame
+version: 0.1
+main: pro.kdray.funniray.sampleminigame.SampleMinigame
+authors: [Funniray]
+description: Sample minigame for my minigame library
+website: https://www.kdray.pro

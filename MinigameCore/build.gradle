@@ -1,0 +1,15 @@
+repositories {
+    mavenCentral()
+    maven {
+        name = 'destroystokyo-repo'
+        url = 'https://repo.destroystokyo.com/repository/maven-public/'
+    }
+    maven {
+        name = 'sonatype'
+        url = 'https://oss.sonatype.org/content/groups/public/'
+    }
+}
+
+dependencies {
+    compile 'com.destroystokyo.paper:paper-api:1.12.2-R0.1-SNAPSHOT'
+}
